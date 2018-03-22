@@ -28,7 +28,7 @@ def load_environment_backend(env_backend):
         try:
             return load_backend(env_backend)
         except ImportError as e:
-            print(e)
+            print('load_environment_backend', e)
             raise ImportError(
                 "The backend specified in ETH_HASH_BACKEND, '{0}', is not installed. "
                 "Install with `pip install eth-hash[{0}]`.".format(env_backend)
@@ -44,7 +44,8 @@ def choose_available_backend():
     for backend in SUPPORTED_BACKENDS:
         try:
             return load_backend(backend)
-        except ImportError:
+        except ImportError as e:
+            print('choose_available_backend', e)
             pass
     raise ImportError(
         "None of these hashing backends are installed: %r.\n"
