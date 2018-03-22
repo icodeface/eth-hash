@@ -21,12 +21,12 @@ def get_backend_in_environment():
 
 def load_backend(backend_name):
     try:
-        importlib.import_module('./eth_hash.backends.%s' % backend_name)
+        importlib.import_module('.backends.%s' % backend_name)
         print('successssss')
     except (BaseException, ) as e:
-        print('try to load backend', './eth_hash.backends.%s' % backend_name, str(e))
+        print('try to load backend', '.backends.%s' % backend_name, str(e))
 
-    return importlib.import_module('eth_hash.backends.%s' % backend_name)
+    return importlib.import_module('backends.%s' % backend_name)
 
 
 def load_environment_backend(env_backend):
