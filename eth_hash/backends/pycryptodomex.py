@@ -1,4 +1,4 @@
-from Crypto.Hash import (
+from Cryptodome.Hash import (
     keccak,
 )
 from eth_hash.preimage import (

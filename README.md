@@ -22,7 +22,7 @@ Read more in the [documentation on ReadTheDocs](http://eth-hash.readthedocs.io/)
 ## Quickstart
 
 ```sh
-pip install eth-hash[pycryptodome]
+pip install eth-hash[pycryptodomex]
 ```
 
 ```py
